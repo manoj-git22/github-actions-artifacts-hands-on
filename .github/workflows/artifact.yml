@@ -21,6 +21,7 @@ jobs:
   
   download:
     runs-on: ubuntu-latest
+    needs: build
     steps:
     - name: Make Directory
       run: mkdir artifacts
@@ -31,5 +32,6 @@ jobs:
         path: artifacts
     - name: Display Content of text file
       run: cat ./artifacts/hello.txt
+
 
 
